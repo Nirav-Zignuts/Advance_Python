@@ -22,7 +22,7 @@ pip3 install -r requirements.txt
 4. Set up the database
 Run the below command to create  database tables:
 Copy
-python manage.py migrate
+python3 manage.py migrate
 
 7. Run the development server
 Now, you can run the Django development server:
