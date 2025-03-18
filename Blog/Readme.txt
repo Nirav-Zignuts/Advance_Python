@@ -18,8 +18,8 @@ SQLite (default database used in this project)
 Installation
 1. first clone the repository
 go to terminal and do following
-Copy
-git clone https://github.com/yourusername/django-blog.git
+Copy 
+git clone https://github.com/Nirav-Zignuts/Advance_Python.git
 cd django-blog
 2. Set up a virtual environment
 

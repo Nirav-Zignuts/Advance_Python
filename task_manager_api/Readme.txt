@@ -6,7 +6,7 @@ This API allows user to manage task with built using JWT authentication .  REST 
 Installation
 1. Clone the repository
 Copy
-git clone https://github.com/yourusername/django-product-api.git
+git clone https://github.com/Nirav-Zignuts/Advance_Python.git
 cd django-product-api
 2. Set up a virtual environment
 Create and activate  virtual environment for the project:
