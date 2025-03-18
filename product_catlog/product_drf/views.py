@@ -15,11 +15,11 @@ class ProductAPIView(APIView):
 
     def get(self, request ,id=None):
         if id:
-            product = Product.objects.get(id=id)
+            product = Product.objects.get(id=id, is_deleted=False)
             serializer = ProductSerializer(product)
             return response.Response(serializer.data)
         else:
-            products = Product.objects.all()
+            products = Product.objects.filter(is_deleted=False)
             serializer = ProductSerializer(products, many=True)
             return response.Response(serializer.data)
         
@@ -51,7 +51,8 @@ class ProductAPIView(APIView):
         
     def delete(self, request, id):
         product = Product.objects.get(id=id)
-        product.delete()
+        product.is_deleted = True
+        product.save()
         return response.Response({'success': 'Product deleted successfully'},status=status.HTTP_204_NO_CONTENT)
     
 
